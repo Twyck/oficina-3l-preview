@@ -10,19 +10,26 @@ npm run build    # gera dist/
 npm run deploy   # publica no GitHub Pages (Twyck/oficina-3l-preview), só com autorização
 ```
 
-## Direção
-- **Paleta da marca:** preto dos posts, dourado da logo de engrenagem (`#F2B90F`), fita zebrada preta e amarela como a da área dos elevadores, e as cores das luzes de painel (âmbar, vermelho, verde).
-- **Tipografia:** Archivo variável (expandida nos títulos, lembrando o letreiro da logo) + JetBrains Mono para os mostradores.
-- **Conceito próprio:** o site é um **painel de carro**. Na abertura, as luzes de alerta acendem e o conta-giros varre até o fim e volta, como no autoteste ao girar a chave. Depois o ponteiro "acelera" com a velocidade do scroll. Cada serviço é uma luz do painel. O status (aberto/fechado) é real, pelo horário de São Paulo.
+## Direção (v2)
+A v1 (painel de carro escuro) foi descartada: parecia a mesma fórmula dos outros sites. A v2 segue as referências do João (BeMechanic, CarHive, Car Doctor e Depower), com a cor da marca no lugar do azul:
+- **Blocos de cor:** concreto claro, preto e dourado sólido (`--accent`, troca em uma linha se o cliente quiser azul).
+- **Tipografia:** Unbounded (larga, como o letreiro da logo), Manrope e Geist Mono.
+- **Hero "ficha técnica" (Depower):** "3L" gigante, foto de trabalho com o cartão dourado de status ao vivo e a linha de números (5,0 · 36 · 9–18h · 120 kg).
+- **Por que a 3L (BeMechanic):** seção preta com checklist e a fileira de ícones de serviço.
+- **Serviços (CarHive):** painel preto com cards brancos por cima; a seta de cada card abre o WhatsApp já com o serviço.
+- **Equipe:** os dois Lucas.
+- **Agendar (BeMechanic):** bloco dourado + foto. Interação própria: a **ordem de serviço** se preenche enquanto a pessoa digita o carro e o problema, e o botão manda tudo pronto para o WhatsApp.
+- **Como funciona (Car Doctor):** 5 etapas com frases reais de clientes; o trilho enche com o scroll.
+- **Galeria em mosaico**, **avaliações** e **rodapé em bloco dourado** com horário ao vivo.
 
 ## Roteiro das cenas
-1. **Partida:** autoteste do painel + "Transparência e cuidado do início ao fim." + foto dos dois Lucas.
-2. **Fita zebrada** com os serviços; acelera com o scroll.
-3. **Serviços (fixo no desktop):** seis luzes acendem uma a uma e o serviço troca. No mobile, são cartões cuja luz acende ao chegar.
-4. **Do início ao fim:** a ordem de serviço em 5 etapas, cada uma com uma frase real de avaliação. O marcador de combustível enche e as etapas são "ticadas".
-5. **A oficina:** a mudança de endereço em julho de 2025, os números e a galeria "Do pequeno ao gigante".
-6. **Avaliações:** 5,0, assuntos mais citados e quatro avaliações.
-7. **Visite:** relógio ao vivo, status, horários, rotas e WhatsApp.
+1. "3L" sobe, a foto abre de cima para baixo como porta de garagem, os números contam.
+2. Checks e ícones entram em sequência.
+3. Cards sobem sobre o painel preto.
+4. Equipe com parallax dentro da moldura.
+5. Ticket da ordem de serviço "sai da impressora".
+6. Trilho das etapas enche e cada número fica dourado.
+7. Galeria revela de baixo para cima; a coluna da direita anda mais devagar.
 
 ## Fontes de cada informação
 | Informação | Fonte |
@@ -52,4 +59,4 @@ Preços foram omitidos de propósito.
 - **Link de avaliação do Google** (um cliente pediu nos comentários) pode virar um botão.
 
 ## QA (17/11/2026)
-`auditoria-layout` e `auditoria-midia` com 0 problemas nas 14 resoluções. A seção de serviços engata exatamente em 1024, 1280 e 1920. Sem erros de console nem overflow ao redimensionar através de 1024px. Com movimento reduzido, todo o conteúdo fica visível.
+v2: `auditoria-layout` e `auditoria-midia` com 0 problemas nas 14 resoluções. Sem seções fixas. Sem erros de console nem overflow ao redimensionar através de 1024px; com movimento reduzido, tudo visível. `checar-menu-ativo` acusa "Por que a 3L" e "Equipe": a ferramenta mede em 60% da tela abaixo do topo, e essas seções são mais baixas que isso (no navegador o menu marca certo).
