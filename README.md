@@ -10,7 +10,7 @@ npm run build    # gera dist/
 npm run deploy   # publica no GitHub Pages (Twyck/oficina-3l-preview), só com autorização
 ```
 
-## Direção (v3: escuro, a cara da marca)
+## Direção (v4: segue o modelo enviado pelo João em 17/11)
 A v1 (painel de carro) e a v2 (base clara) foram descartadas. A v3 segue as referências (BeMechanic, CarHive, Car Doctor e Depower) com a cara da marca: preto dos posts, dourado da logo, amarelo do card de localização e o quadriculado do flyer de férias. Hero com foto cheia (BeMechanic):
 - **Blocos de cor:** preto e grafite com blocos dourados sólidos (`--gold`); a faixa quadriculada do flyer separa hero e rodapé.
 - **Tipografia:** Unbounded (larga, como o letreiro da logo), Manrope e Geist Mono.

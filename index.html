@@ -47,7 +47,6 @@
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <symbol id="i-scan" viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="15" rx="2.5"/><path d="M9 17l3-4 3 3 3-5 3 6M12 26h8M16 22v4"/></symbol>
@@ -60,17 +59,18 @@
       <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
       <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
       <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.3 4.8 4.9-1.3A9.8 9.8 0 1 0 12 2.2zm0 17.9c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z" fill="currentColor" stroke="none"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
     </defs>
   </svg>
 
   <header class="nav" data-nav>
     <a class="nav__brand" href="#inicio" aria-label="Oficina 3L, início"><img src="logo-mark.png" alt="" width="384" height="414"><span>Oficina <b>3L</b></span></a>
     <nav class="nav__links" aria-label="Seções">
-      <a href="#porque" data-nav-link="porque">Por que a 3L</a>
       <a href="#servicos" data-nav-link="servicos">Serviços</a>
       <a href="#equipe" data-nav-link="equipe">Equipe</a>
-      <a href="#galeria" data-nav-link="galeria">Galeria</a>
-      <a href="#avaliacoes" data-nav-link="avaliacoes">Avaliações</a>
+      <a href="#avaliacoes" data-nav-link="equipe">Avaliações</a>
+      <a href="#galeria" data-nav-link="equipe">Galeria</a>
+      <a href="#agendar" data-nav-link="agendar">Agendar</a>
     </nav>
     <a class="btn btn--gold nav__cta" href="#agendar">Agendar visita <svg class="ico"><use href="#i-seta"/></svg></a>
     <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" data-burger><span data-burger-label>Menu</span></button>
@@ -78,248 +78,126 @@
 
   <div class="mmenu" id="mmenu" hidden data-mmenu>
     <ul class="mmenu__links">
-      <li><a href="#porque">Por que a 3L</a></li>
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#equipe">Equipe</a></li>
-      <li><a href="#agendar">Agendar visita</a></li>
-      <li><a href="#galeria">Galeria</a></li>
       <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#agendar">Agendar</a></li>
     </ul>
     <a class="btn btn--gold mmenu__cta" href="https://wa.me/5511992158526?text=Ol%C3%A1%2C%20Oficina%203L!%20Quero%20agendar%20um%20diagn%C3%B3stico." target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg> Chamar no WhatsApp</a>
     <p class="mmenu__foot">R. Hercílio Caetano Pereira, 18a · Franco da Rocha</p>
   </div>
 
   <main id="conteudo">
-    <!-- 1. Abertura: foto cheia, como os flyers da marca -->
+    <!-- 1. Hero -->
     <section class="hero" id="inicio" data-section="inicio" tabindex="-1">
-      <div class="hero__bg" data-hero-photo data-allow-overlap><img data-pic="mao-na-massa" data-parallax sizes="100vw" alt="Mecânico da Oficina 3L com lanterna de cabeça trabalhando no motor de um carro" loading="eager" fetchpriority="high"></div>
+      <div class="hero__media" data-hero-photo data-allow-overlap><img data-pic="mao-na-massa" data-parallax sizes="(min-width: 1024px) 66vw, 100vw" alt="Mecânico da Oficina 3L com lanterna de cabeça trabalhando no motor de um carro" loading="eager" fetchpriority="high"></div>
       <div class="hero__content">
-        <p class="kicker kicker--gold" data-hero-fade><img class="kicker__mark" src="logo-mark.png" alt="" width="384" height="414">Oficina mecânica · Franco da Rocha, SP</p>
-        <h1 class="hero__title"><span class="line" data-hero-line>Transparência</span> <span class="line" data-hero-line>e cuidado</span> <span class="line line--gold" data-hero-line>do início ao fim.</span></h1>
-        <p class="hero__lead" data-hero-fade>Diagnóstico preciso, manutenção preventiva e corretiva, freios, suspensão e troca de óleo. Seu carro em boas mãos.</p>
+        <p class="kicker" data-hero-fade>Oficina mecânica em Franco da Rocha</p>
+        <h1 class="hero__title"><span class="line" data-hero-line><i>T</i>ransparência</span> <span class="line" data-hero-line>e cuidado</span> <span class="line line--gold" data-hero-line>do início ao fim.</span></h1>
+        <p class="hero__lead" data-hero-fade>Diagnóstico preciso, manutenção preventiva e corretiva, e um atendimento que mostra o que está sendo feito no seu carro.</p>
         <div class="hero__ctas" data-hero-fade>
           <a class="btn btn--gold" href="#agendar">Agendar diagnóstico <svg class="ico"><use href="#i-seta"/></svg></a>
-          <a class="btn btn--line" href="#servicos">Ver serviços</a>
+          <a class="link-wa" href="https://wa.me/5511992158526?text=Ol%C3%A1%2C%20Oficina%203L!" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg> Fale conosco</a>
         </div>
-      </div>
-      <div class="hero__base">
-        <dl class="specs" aria-label="A oficina em números">
-          <div class="spec" data-spec><dt>Nota no Google</dt><dd><span data-count="5" data-decimals="1">5,0</span><span class="spec__stars" aria-hidden="true">★</span></dd></div>
-          <div class="spec" data-spec><dt>Avaliações</dt><dd><span data-count="36">36</span></dd></div>
-          <div class="spec" data-spec><dt>Seg. a sex.</dt><dd>9–18h</dd></div>
-          <div class="spec" data-spec><dt>Câmbio mais pesado do mês</dt><dd><span data-count="120">120</span><small>kg</small></dd></div>
-        </dl>
-        <a class="status-card" href="#visite" data-status-card>
-          <span class="status-card__row"><span class="led" aria-hidden="true"></span><b data-status-title>Seg. a sex.</b></span>
-          <span class="status-card__txt" data-status-short>9h às 18h</span>
-          <span class="status-card__go">Horário e endereço <svg class="ico"><use href="#i-seta"/></svg></span>
-        </a>
-      </div>
-    </section>
-    <div class="checker" aria-hidden="true"></div>
-
-    <!-- 2. Por que a 3L -->
-    <section class="porque" id="porque" data-section="porque" tabindex="-1">
-      <div class="porque__grid">
-        <h2 class="h2">Por que confiar o seu carro <em>à 3L?</em></h2>
-        <ul class="checks">
-          <li data-check><svg class="ico"><use href="#i-check"/></svg> Diagnóstico preciso antes de qualquer troca</li>
-          <li data-check><svg class="ico"><use href="#i-check"/></svg> Mostram o que está sendo trocado</li>
-          <li data-check><svg class="ico"><use href="#i-check"/></svg> Ferramentas específicas e peças originais</li>
-          <li data-check><svg class="ico"><use href="#i-check"/></svg> Entrega dentro do prazo</li>
-          <li data-check><svg class="ico"><use href="#i-check"/></svg> Preço justo, o assunto mais citado nas avaliações</li>
+        <ul class="hero__proof" data-hero-fade>
+          <li><svg class="g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#f2b90f" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z"/><path fill="#f2b90f" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z" opacity=".85"/><path fill="#f2b90f" d="M6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9z" opacity=".7"/><path fill="#f2b90f" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.5l3.3 2.6C7.2 7.8 9.4 6 12 6z" opacity=".55"/></svg><b>5,0</b> <span class="star" aria-hidden="true">★</span> 36 avaliações no Google</li>
+          <li><span class="led" aria-hidden="true"></span><span data-status-short>Seg. a sex., 9h às 18h</span></li>
         </ul>
-        <div class="porque__text">
-          <p class="porque__lead">“Tive uma ótima experiência. Desde o atendimento até a entrega do veículo, tudo foi feito com muito profissionalismo e transparência.”</p>
-          <p class="porque__by">Bruno Henrique, no Google</p>
-          <a class="btn btn--gold" href="#avaliacoes">Ler avaliações <svg class="ico"><use href="#i-seta"/></svg></a>
-        </div>
       </div>
-
-      <ul class="tiles" aria-label="Serviços">
-        <li class="tile" data-tile><a href="#servicos"><svg class="tile__ico"><use href="#i-scan"/></svg><span>Diagnóstico completo</span></a></li>
-        <li class="tile" data-tile><a href="#servicos"><svg class="tile__ico"><use href="#i-chave"/></svg><span>Manutenção preventiva e corretiva</span></a></li>
-        <li class="tile" data-tile><a href="#servicos"><svg class="tile__ico"><use href="#i-freio"/></svg><span>Freios</span></a></li>
-        <li class="tile" data-tile><a href="#servicos"><svg class="tile__ico"><use href="#i-mola"/></svg><span>Suspensão</span></a></li>
-        <li class="tile" data-tile><a href="#servicos"><svg class="tile__ico"><use href="#i-oleo"/></svg><span>Troca de óleo</span></a></li>
-        <li class="tile" data-tile><a href="#servicos"><svg class="tile__ico"><use href="#i-estrada"/></svg><span>Revisão para viagens</span></a></li>
-      </ul>
     </section>
 
-    <!-- 3. Serviços -->
+    <!-- 2. Serviços -->
     <section class="servicos" id="servicos" data-section="servicos" tabindex="-1">
-      <div class="servicos__panel">
-        <div>
-          <p class="kicker kicker--gold">Serviços</p>
-          <h2 class="h2">Do diagnóstico à <em>revisão de viagem.</em></h2>
-        </div>
-        <p class="servicos__intro">Carro grande ou pequeno, cada veículo recebe atenção, cuidado e um diagnóstico preciso. Toque na seta de um serviço para agendar direto pelo WhatsApp.</p>
+      <div class="servicos__head" data-reveal>
+        <p class="kicker">Nossos serviços</p>
+        <h2 class="h2"><i>T</i>udo o que seu carro precisa.</h2>
+        <p class="sub">Do diagnóstico à manutenção, com qualidade e transparência.</p>
+        <a class="link" href="#agendar">Agendar um serviço <svg class="ico"><use href="#i-seta"/></svg></a>
       </div>
-      <div class="cards">
-        <article class="card" data-card>
-          <header class="card__head"><h3>Diagnóstico completo</h3><a class="card__go" href="https://wa.me/5511992158526?text=Ol%C3%A1%2C%20Oficina%203L!%20Quero%20agendar%20um%20diagn%C3%B3stico%20completo." target="_blank" rel="noopener" aria-label="Agendar diagnóstico completo pelo WhatsApp"><svg class="ico"><use href="#i-seta"/></svg></a></header>
-          <p>Falha intermitente? Diagnóstico preciso para achar o problema antes de qualquer troca.</p>
-          <figure class="card__photo"><img data-pic="manometro" sizes="(min-width: 1024px) 28vw, (min-width: 640px) 45vw, 90vw" alt="Manômetro conectado ao sistema de arrefecimento durante um teste"><span class="card__badge"><svg><use href="#i-scan"/></svg></span></figure>
-        </article>
-        <article class="card" data-card>
-          <header class="card__head"><h3>Manutenção preventiva e corretiva</h3><a class="card__go" href="https://wa.me/5511992158526?text=Ol%C3%A1%2C%20Oficina%203L!%20Quero%20agendar%20uma%20manuten%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Agendar manutenção pelo WhatsApp"><svg class="ico"><use href="#i-seta"/></svg></a></header>
-          <p>Equipamentos adequados, ferramentas específicas e peças originais. Cada carro tem suas particularidades.</p>
-          <figure class="card__photo"><img data-pic="motor-aberto" sizes="(min-width: 1024px) 28vw, (min-width: 640px) 45vw, 90vw" alt="Dois mecânicos trabalhando num motor desmontado sobre a bancada"><span class="card__badge"><svg><use href="#i-chave"/></svg></span></figure>
-        </article>
-        <article class="card" data-card>
-          <header class="card__head"><h3>Freios</h3><a class="card__go" href="https://wa.me/5511992158526?text=Ol%C3%A1%2C%20Oficina%203L!%20Quero%20revisar%20os%20freios." target="_blank" rel="noopener" aria-label="Agendar revisão de freios pelo WhatsApp"><svg class="ico"><use href="#i-seta"/></svg></a></header>
-          <p>Nem peça nova passa sem olhar: numa Nissan Frontier, a equipe achou uma sapata nova, mas trincada.</p>
-          <figure class="card__photo"><img data-pic="radiador" sizes="(min-width: 1024px) 28vw, (min-width: 640px) 45vw, 90vw" alt="Frente de um Chevrolet aberta na oficina, com o radiador à mostra"><span class="card__badge"><svg><use href="#i-freio"/></svg></span></figure>
-        </article>
-        <article class="card" data-card>
-          <header class="card__head"><h3>Suspensão</h3><a class="card__go" href="https://wa.me/5511992158526?text=Ol%C3%A1%2C%20Oficina%203L!%20Quero%20olhar%20a%20suspens%C3%A3o." target="_blank" rel="noopener" aria-label="Agendar revisão de suspensão pelo WhatsApp"><svg class="ico"><use href="#i-seta"/></svg></a></header>
-          <p>Do pequeno ao gigante: a equipe está preparada para cuidar do seu veículo com experiência e dedicação.</p>
-          <figure class="card__photo"><img data-pic="classic" sizes="(min-width: 1024px) 28vw, (min-width: 640px) 45vw, 90vw" alt="Chevrolet Classic cinza estacionado na oficina"><span class="card__badge"><svg><use href="#i-mola"/></svg></span></figure>
-        </article>
-        <article class="card" data-card>
-          <header class="card__head"><h3>Troca de óleo</h3><a class="card__go" href="https://wa.me/5511992158526?text=Ol%C3%A1%2C%20Oficina%203L!%20Quero%20agendar%20uma%20troca%20de%20%C3%B3leo." target="_blank" rel="noopener" aria-label="Agendar troca de óleo pelo WhatsApp"><svg class="ico"><use href="#i-seta"/></svg></a></header>
-          <p>O básico feito com capricho, com o mesmo cuidado de qualquer outro serviço da casa.</p>
-          <figure class="card__photo"><img data-pic="celta-capo" sizes="(min-width: 1024px) 28vw, (min-width: 640px) 45vw, 90vw" alt="Chevrolet Celta prata com o capô aberto na oficina"><span class="card__badge"><svg><use href="#i-oleo"/></svg></span></figure>
-        </article>
-        <article class="card" data-card>
-          <header class="card__head"><h3>Revisão para viagens</h3><a class="card__go" href="https://wa.me/5511992158526?text=Ol%C3%A1%2C%20Oficina%203L!%20Quero%20fazer%20a%20revis%C3%A3o%20antes%20de%20viajar." target="_blank" rel="noopener" aria-label="Agendar revisão para viagem pelo WhatsApp"><svg class="ico"><use href="#i-seta"/></svg></a></header>
-          <p>Vai viajar? Primeiro passa na 3L. Uma revisão antes da estrada, para as férias não virarem dor de cabeça.</p>
-          <figure class="card__photo"><img data-pic="triciclo" sizes="(min-width: 1024px) 28vw, (min-width: 640px) 45vw, 90vw" alt="Triciclo preto pronto para rodar depois do serviço"><span class="card__badge"><svg><use href="#i-estrada"/></svg></span></figure>
-        </article>
-      </div>
-    </section>
-
-    <!-- 4. Equipe -->
-    <section class="equipe" id="equipe" data-section="equipe" tabindex="-1">
-      <div class="equipe__copy">
-        <p class="kicker">Equipe</p>
-        <h2 class="h2">Quem cuida <em>do seu carro.</em></h2>
-        <p class="equipe__lead">Em julho de 2025 a oficina mudou de endereço, e o Lucas Lacerda chegou junto com o Lucas Andrelo para essa nova fase. Muitos clientes ainda lembram do nome antigo, Andrelo Garagem.</p>
-        <a class="btn btn--gold" href="#agendar">Falar com a equipe <svg class="ico"><use href="#i-seta"/></svg></a>
-      </div>
-      <figure class="equipe__photo">
-        <div class="equipe__frame"><img data-pic="equipe" data-parallax sizes="(min-width: 1024px) 50vw, 100vw" alt="Lucas Andrelo e Lucas Lacerda, de costas, com os moletons da Oficina 3L"></div>
-        <figcaption class="names">
-          <span class="name"><b>Lucas Andrelo</b><small>À frente desde a Andrelo Garagem</small></span>
-          <span class="name"><b>Lucas Lacerda</b><small>Na nova fase, desde jul. 2025</small></span>
-        </figcaption>
-      </figure>
-    </section>
-
-    <!-- 5. Agendar: a ordem de serviço se monta enquanto você digita -->
-    <section class="agendar" id="agendar" data-section="agendar" tabindex="-1">
-      <div class="agendar__block">
-        <h2 class="h2">Agende uma visita.</h2>
-        <p class="agendar__sub">O carro está com algum problema? Conte aqui e a mensagem já vai pronta para o WhatsApp da oficina.</p>
-        <form class="book" data-book>
-          <label class="field"><span>Seu carro</span><input name="carro" type="text" placeholder="Ex.: Onix 2019" autocomplete="off" maxlength="40" data-in="carro"></label>
-          <label class="field"><span>O que está acontecendo?</span><input name="sintoma" type="text" placeholder="Ex.: barulho ao frear" autocomplete="off" maxlength="80" data-in="sintoma"></label>
-          <button class="btn btn--dark book__send" type="submit"><svg class="ico"><use href="#i-wa"/></svg> Enviar no WhatsApp</button>
-        </form>
-        <div class="ticket" data-ticket>
-          <p class="ticket__top"><span>Ordem de serviço</span><span data-ticket-date>--/--</span></p>
-          <dl>
-            <div><dt>Veículo</dt><dd data-out="carro">—</dd></div>
-            <div><dt>Relato</dt><dd data-out="sintoma">—</dd></div>
-            <div><dt>Primeira etapa</dt><dd>Diagnóstico</dd></div>
-          </dl>
-          <p class="ticket__foot">Oficina 3L · do início ao fim</p>
-        </div>
-      </div>
-      <figure class="agendar__photo"><img data-pic="triciclo-servico" data-parallax sizes="(min-width: 1024px) 45vw, 100vw" alt="Mecânico trabalhando no motor de um triciclo"></figure>
-      <div class="agendar__alt">
-        <p class="agendar__alt-title">Prefere falar direto?</p>
-        <a href="https://wa.me/5511992158526" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg> (11) 99215-8526</a>
-        <a href="https://www.instagram.com/oficina.3l/" target="_blank" rel="noopener">@oficina.3l</a>
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Oficina%203L%2C%20R.%20Herc%C3%ADlio%20Caetano%20Pereira%2C%2018a%2C%20Franco%20da%20Rocha" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg> Rotas</a>
-      </div>
-    </section>
-
-    <!-- 6. Como funciona -->
-    <section class="processo" id="processo" data-section="processo" tabindex="-1">
-      <p class="kicker kicker--center">Como funciona</p>
-      <h2 class="h2 h2--center">Do início <em>ao fim.</em></h2>
-      <p class="processo__sub">Nas palavras de quem já passou pela oficina.</p>
-      <div class="steps-wrap">
-        <div class="rail" aria-hidden="true"><i data-rail></i></div>
-        <ol class="steps">
-          <li class="step" data-step><span class="step__n">1</span><h3>Atendimento</h3><p>“Fornecem atenção desde o diagnóstico até a entrega!”</p><cite>Leonardo Fuentealba</cite></li>
-          <li class="step" data-step><span class="step__n">2</span><h3>Diagnóstico</h3><p>“Descobriu um problema que nenhum outro mecânico descobria.”</p><cite>Destaque no Google</cite></li>
-          <li class="step" data-step><span class="step__n">3</span><h3>Explicação</h3><p>“Explicaram o serviço com clareza, mostraram o que estava sendo trocado.”</p><cite>Bruno Henrique</cite></li>
-          <li class="step" data-step><span class="step__n">4</span><h3>Serviço</h3><p>“Muito bem equipada, com ferramentas de última geração.”</p><cite>Kaio Langame</cite></li>
-          <li class="step" data-step><span class="step__n">5</span><h3>Entrega</h3><p>“Serviço de qualidade, ótimos preços e entrega dentro do prazo!!”</p><cite>Destaque no Google</cite></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- 7. Galeria -->
-    <section class="galeria" id="galeria" data-section="galeria" tabindex="-1">
-      <div class="galeria__copy">
-        <p class="kicker kicker--gold">Galeria</p>
-        <h2 class="h2">Do pequeno <em>ao gigante.</em></h2>
-        <p>Bastidores da oficina, publicados pela própria 3L no Instagram e no Google.</p>
-        <a class="btn btn--gold" href="https://www.instagram.com/oficina.3l/" target="_blank" rel="noopener">Mais no Instagram <svg class="ico"><use href="#i-seta"/></svg></a>
-      </div>
-      <ul class="mosaic">
-        <li class="shot shot--a" data-shot><figure><div class="shot__img"><img data-pic="fusca" sizes="(min-width: 1024px) 24vw, 50vw" alt="Fusca com a tampa do motor aberta e cabos de teste conectados"></div><figcaption>Fusca no teste elétrico</figcaption></figure></li>
-        <li class="shot shot--b" data-shot><figure><div class="shot__img"><img data-pic="reel-cambio" sizes="(min-width: 1024px) 24vw, 50vw" alt="Câmbio de cerca de 120 kg sobre o carrinho da oficina"></div><figcaption>Câmbio de ~120 kg</figcaption></figure></li>
-        <li class="shot shot--c" data-shot><figure><div class="shot__img"><img data-pic="mao-na-massa" sizes="(min-width: 1024px) 24vw, 50vw" alt="Mecânico trabalhando no cofre do motor"></div><figcaption>Mão na massa</figcaption></figure></li>
-        <li class="shot shot--d" data-shot><figure><div class="shot__img"><img data-pic="reel-frontier" sizes="(min-width: 1024px) 24vw, 50vw" alt="Frente de uma Nissan Frontier na oficina"></div><figcaption>Frontier: sapata nova, mas trincada</figcaption></figure></li>
+      <figure class="servicos__photo" data-reveal><img data-pic="manometro" data-parallax sizes="(min-width: 1024px) 20vw, 50vw" alt="Manômetro conectado ao sistema de arrefecimento durante um teste"></figure>
+      <ul class="svc-list">
+        <li data-svc><h3>Diagnóstico completo</h3><p>Identifica o problema com precisão, antes de qualquer troca.</p></li>
+        <li data-svc><h3>Manutenção preventiva e corretiva</h3><p>Ferramentas específicas e peças originais.</p></li>
+        <li data-svc><h3>Freios</h3><p>Até sapata nova, mas trincada, aparece no diagnóstico.</p></li>
+        <li data-svc><h3>Suspensão</h3><p>Do carro pequeno à caminhonete.</p></li>
+        <li data-svc><h3>Troca de óleo</h3><p>O básico, feito com capricho.</p></li>
+        <li data-svc><h3>Revisão para viagens</h3><p>Para pegar a estrada tranquilo com a família.</p></li>
       </ul>
+      <figure class="servicos__photo servicos__photo--wide" data-reveal><img data-pic="celta-capo" data-parallax sizes="(min-width: 1024px) 32vw, 100vw" alt="Chevrolet Celta prata com o capô aberto na oficina"></figure>
     </section>
 
-    <!-- 8. Avaliações -->
-    <section class="avaliacoes" id="avaliacoes" data-section="avaliacoes" tabindex="-1">
-      <div class="avaliacoes__head">
-        <p class="kicker">Avaliações</p>
-        <p class="score"><b>5,0</b><span><span class="stars" aria-hidden="true">★★★★★</span>36 avaliações no Google</span></p>
-        <ul class="chips" aria-label="Assuntos mais citados">
-          <li>preço <b>8</b></li><li>diagnóstico <b>4</b></li><li>honestidade <b>4</b></li><li>mão de obra <b>3</b></li><li>atenção <b>3</b></li>
+    <!-- 3. Equipe · avaliação · galeria -->
+    <section class="trio" id="equipe" data-section="equipe" tabindex="-1">
+      <div class="trio__team" data-reveal>
+        <figure class="trio__photo"><img data-pic="equipe" data-parallax sizes="(min-width: 1024px) 30vw, 100vw" alt="Lucas Andrelo e Lucas Lacerda, de costas, com os moletons da Oficina 3L"></figure>
+        <div class="trio__text">
+          <p class="kicker">Nossa equipe</p>
+          <h2 class="h3">Quem cuida do seu carro.</h2>
+          <p>Em julho de 2025 a oficina mudou de endereço, e o Lucas Lacerda chegou junto com o Lucas Andrelo para essa nova fase. Muitos clientes ainda lembram do nome antigo, Andrelo Garagem.</p>
+          <a class="link" href="#agendar">Fale com a equipe <svg class="ico"><use href="#i-seta"/></svg></a>
+        </div>
+      </div>
+
+      <div class="trio__quote" id="avaliacoes" data-reveal>
+        <span class="qmark" aria-hidden="true">“</span>
+        <div class="quotes" data-quotes aria-live="polite">
+          <figure class="q is-active" data-q><blockquote>Tive uma ótima experiência. Desde o atendimento até a entrega do veículo, tudo foi feito com muito profissionalismo e transparência.</blockquote><figcaption><b>Bruno Henrique</b><span>Google</span></figcaption></figure>
+          <figure class="q" data-q><blockquote>Excelente oficina! Os rapazes são muito atenciosos, prestativos e realmente entendem do que fazem.</blockquote><figcaption><b>Kaio Langame</b><span>Google</span></figcaption></figure>
+          <figure class="q" data-q><blockquote>Mão de obra especializada, compromisso, honestidade e preço justo. O melhor da região!</blockquote><figcaption><b>Denilson Oliveira</b><span>Google</span></figcaption></figure>
+          <figure class="q" data-q><blockquote>Fornecem atenção desde o diagnóstico até a entrega! Preço justo e trabalho excepcional! Ganharam mais um cliente.</blockquote><figcaption><b>Leonardo Fuentealba</b><span>Google</span></figcaption></figure>
+        </div>
+        <div class="dots" role="group" aria-label="Escolher avaliação">
+          <button type="button" class="dot is-active" data-dot aria-label="Avaliação 1"></button>
+          <button type="button" class="dot" data-dot aria-label="Avaliação 2"></button>
+          <button type="button" class="dot" data-dot aria-label="Avaliação 3"></button>
+          <button type="button" class="dot" data-dot aria-label="Avaliação 4"></button>
+        </div>
+      </div>
+
+      <div class="trio__gallery" id="galeria" data-reveal>
+        <p class="kicker">Galeria</p>
+        <h2 class="h3">Confira nosso trabalho.</h2>
+        <a class="link" href="https://www.instagram.com/oficina.3l/" target="_blank" rel="noopener">Ver mais fotos <svg class="ico"><use href="#i-seta"/></svg></a>
+        <ul class="thumbs">
+          <li><img data-pic="motor-aberto" sizes="(min-width: 1024px) 9vw, 30vw" alt="Motor desmontado na bancada"></li>
+          <li><img data-pic="classic" sizes="(min-width: 1024px) 9vw, 30vw" alt="Chevrolet Classic na oficina"></li>
+          <li><img data-pic="triciclo-servico" sizes="(min-width: 1024px) 9vw, 30vw" alt="Mecânico trabalhando num triciclo"></li>
         </ul>
       </div>
-      <div class="reviews">
-        <figure class="review" data-review><blockquote>“Excelente oficina! Os rapazes são muito atenciosos, prestativos e realmente entendem do que fazem.”</blockquote><figcaption><span class="avatar" aria-hidden="true">K</span>Kaio Langame</figcaption></figure>
-        <figure class="review review--gold" data-review><blockquote>“Mão de obra especializada, compromisso, honestidade e preço justo. O melhor da região!”</blockquote><figcaption><span class="avatar" aria-hidden="true">D</span>Denilson Oliveira</figcaption></figure>
-        <figure class="review" data-review><blockquote>“Excelente profissional, certeiro no diagnóstico e solução do problema.”</blockquote><figcaption><span class="avatar" aria-hidden="true">★</span>Destaque no Google</figcaption></figure>
+    </section>
+
+    <!-- 4. Agendar: a ordem de serviço se monta enquanto você digita -->
+    <section class="agendar" id="agendar" data-section="agendar" tabindex="-1">
+      <div class="agendar__copy" data-reveal>
+        <p class="kicker">Agende sua visita</p>
+        <h2 class="h2">Conte o que está <span class="gold">acontecendo.</span></h2>
+        <p class="sub">A mensagem vai pronta para o WhatsApp da oficina.</p>
+      </div>
+      <form class="book" data-book>
+        <label class="field"><span>Seu carro</span><input name="carro" type="text" placeholder="Ex.: Onix 2019" autocomplete="off" maxlength="40" data-in="carro"></label>
+        <label class="field"><span>O que está acontecendo?</span><input name="sintoma" type="text" placeholder="Ex.: barulho ao frear" autocomplete="off" maxlength="80" data-in="sintoma"></label>
+        <button class="btn btn--gold book__send" type="submit"><svg class="ico"><use href="#i-wa"/></svg> Enviar no WhatsApp</button>
+      </form>
+      <div class="ticket" data-ticket>
+        <p class="ticket__top"><span>Ordem de serviço</span><span data-ticket-date>--/--</span></p>
+        <dl>
+          <div><dt>Veículo</dt><dd data-out="carro">—</dd></div>
+          <div><dt>Relato</dt><dd data-out="sintoma">—</dd></div>
+          <div><dt>Primeira etapa</dt><dd>Diagnóstico</dd></div>
+        </dl>
+        <p class="ticket__foot">Oficina 3L · do início ao fim</p>
       </div>
     </section>
   </main>
 
-  <div class="checker" aria-hidden="true"></div>
-  <!-- 9. Rodapé em bloco dourado -->
   <footer class="footer" id="visite" tabindex="-1">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <div class="footer__logo"><img src="logo-mark-black.png" alt="" width="384" height="414"><span>Oficina <b>3L</b></span></div>
-        <p>Transparência e cuidado do início ao fim.</p>
-      </div>
-      <div class="footer__col">
-        <p class="footer__h">Visite</p>
-        <address>R. Hercílio Caetano Pereira, 18a<br>Jardim Progresso · Franco da Rocha · SP<br>07812-180</address>
-        <a class="footer__link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Oficina%203L%2C%20R.%20Herc%C3%ADlio%20Caetano%20Pereira%2C%2018a%2C%20Franco%20da%20Rocha" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg> Rotas no Google Maps</a>
-      </div>
-      <div class="footer__col">
-        <p class="footer__h">Horário</p>
-        <p class="footer__now"><span class="led" aria-hidden="true"></span><span data-footer-state>Seg. a sex., 9h às 18h</span></p>
-        <table class="hours">
-          <caption class="sr-only">Horário de funcionamento</caption>
-          <tbody>
-            <tr data-days="1,2,3,4,5"><th scope="row">Segunda a sexta</th><td>9h – 18h</td></tr>
-            <tr data-days="6,0"><th scope="row">Sábado e domingo</th><td>Fechado</td></tr>
-          </tbody>
-        </table>
-        <p class="footer__note">No fim de semana a oficina fecha “pra recarregar as baterias”.</p>
-      </div>
-      <div class="footer__col">
-        <p class="footer__h">Contato</p>
-        <a class="footer__link" href="https://wa.me/5511992158526" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg> (11) 99215-8526</a>
-        <a class="footer__link" href="https://www.instagram.com/oficina.3l/" target="_blank" rel="noopener">@oficina.3l</a>
-      </div>
-    </div>
-    <div class="footer__bar">
-      <p>Prévia de redesign por <a href="https://www.instagram.com/verenna.digital/" target="_blank" rel="noopener">Verenna Digital</a>. Conteúdo e fotos dos canais oficiais da Oficina 3L.</p>
-      <a href="#inicio" class="footer__top">Voltar ao topo ↑</a>
-    </div>
+    <div class="footer__logo"><img src="logo-mark.png" alt="" width="384" height="414"><span>Oficina <b>3L</b></span></div>
+    <a class="footer__item" href="https://www.google.com/maps/dir/?api=1&amp;destination=Oficina%203L%2C%20R.%20Herc%C3%ADlio%20Caetano%20Pereira%2C%2018a%2C%20Franco%20da%20Rocha" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg><span>R. Hercílio Caetano Pereira, 18a<br>Franco da Rocha – SP</span></a>
+    <div class="footer__item"><svg class="ico"><use href="#i-clock"/></svg><span>Seg a Sex: 9h às 18h<br>Sáb e dom: fechado</span></div>
+    <a class="footer__item" href="https://wa.me/5511992158526" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg><span><b>(11) 99215-8526</b><br>Fale pelo WhatsApp</span></a>
+    <p class="footer__motto">Qualidade · Transparência · Confiança</p>
+    <p class="footer__credit">Prévia de redesign por <a href="https://www.instagram.com/verenna.digital/" target="_blank" rel="noopener">Verenna Digital</a> · conteúdo e fotos dos canais oficiais da Oficina 3L · <a href="https://www.instagram.com/oficina.3l/" target="_blank" rel="noopener">@oficina.3l</a></p>
   </footer>
 
   <a class="sticky-cta" href="#agendar" data-sticky-cta><svg class="ico"><use href="#i-wa"/></svg> Agendar diagnóstico</a>
