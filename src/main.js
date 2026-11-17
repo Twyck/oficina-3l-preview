@@ -161,13 +161,13 @@ async function intro() {
   if (reduceMotion) { html.classList.remove('js-intro'); return }
   await Promise.race([document.fonts?.ready, wait(1200)])
   const tl = gsap.timeline({ onStart: () => html.classList.remove('js-intro'), defaults: { ease: 'power4.out' } })
-  tl.fromTo('[data-mark]', { opacity: 0, yPercent: 60 }, { opacity: 1, yPercent: 0, duration: 1.1, stagger: 0.12 }, 0.05)
-    .fromTo('[data-hero-photo]', { opacity: 1, clipPath: 'inset(0 0 100% 0 round 22px)' }, { clipPath: 'inset(0 0 0% 0 round 22px)', duration: 1.3, ease: 'power3.inOut' }, 0.1)
-    .fromTo('.hero__frame img', { scale: 1.35 }, { scale: 1.12, duration: 1.8, ease: 'power3.out' }, 0.1)
-    .fromTo('.status-card', { xPercent: 30, opacity: 0 }, { xPercent: 0, opacity: 1, duration: 0.8 }, 1.0)
-    .fromTo('[data-hero-fade]', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.08 }, 0.45)
-    .fromTo('[data-spec]', { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, stagger: 0.07 }, 0.8)
-    .add(() => $$('[data-count]').forEach(countUp), 0.85)
+  tl.fromTo('[data-hero-photo]', { opacity: 0 }, { opacity: 1, duration: 1.2, ease: 'power2.out' }, 0)
+    .fromTo('.hero__bg img', { scale: 1.3 }, { scale: 1.12, duration: 2.2, ease: 'power3.out' }, 0)
+    .fromTo('[data-hero-line]', { opacity: 0, yPercent: 50 }, { opacity: 1, yPercent: 0, duration: 1.1, stagger: 0.12 }, 0.25)
+    .fromTo('[data-hero-fade]', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.08 }, 0.5)
+    .fromTo('[data-status-card]', { opacity: 0, xPercent: 40 }, { opacity: 1, xPercent: 0, duration: 1, ease: 'power3.out' }, 0.8)
+    .fromTo('[data-spec]', { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, stagger: 0.07 }, 0.9)
+    .add(() => $$('[data-count]').forEach(countUp), 0.95)
 }
 
 function countUp(el) {

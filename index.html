@@ -7,7 +7,7 @@
   <meta name="description" content="Oficina mecânica em Franco da Rocha (SP): diagnóstico completo, manutenção preventiva e corretiva, freios, suspensão e troca de óleo. Transparência e cuidado do início ao fim. Nota 5,0 no Google.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="%SITE_URL%/">
-  <meta name="theme-color" content="#ecebe7">
+  <meta name="theme-color" content="#0d0d0e">
   <link rel="icon" href="favicon.png" type="image/png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -64,7 +64,7 @@
   </svg>
 
   <header class="nav" data-nav>
-    <a class="nav__brand" href="#inicio" aria-label="Oficina 3L, início"><img src="logo-mark-black.png" alt="" width="384" height="414"><span>Oficina <b>3L</b></span></a>
+    <a class="nav__brand" href="#inicio" aria-label="Oficina 3L, início"><img src="logo-mark.png" alt="" width="384" height="414"><span>Oficina <b>3L</b></span></a>
     <nav class="nav__links" aria-label="Seções">
       <a href="#porque" data-nav-link="porque">Por que a 3L</a>
       <a href="#servicos" data-nav-link="servicos">Serviços</a>
@@ -72,7 +72,7 @@
       <a href="#galeria" data-nav-link="galeria">Galeria</a>
       <a href="#avaliacoes" data-nav-link="avaliacoes">Avaliações</a>
     </nav>
-    <a class="btn btn--dark nav__cta" href="#agendar">Agendar visita <svg class="ico"><use href="#i-seta"/></svg></a>
+    <a class="btn btn--gold nav__cta" href="#agendar">Agendar visita <svg class="ico"><use href="#i-seta"/></svg></a>
     <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" data-burger><span data-burger-label>Menu</span></button>
   </header>
 
@@ -90,36 +90,33 @@
   </div>
 
   <main id="conteudo">
-    <!-- 1. Ficha técnica -->
+    <!-- 1. Abertura: foto cheia, como os flyers da marca -->
     <section class="hero" id="inicio" data-section="inicio" tabindex="-1">
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <p class="hero__mark" aria-hidden="true"><span data-mark>3</span><span data-mark>L</span></p>
-          <p class="kicker" data-hero-fade>Oficina mecânica · Franco da Rocha, SP</p>
-          <h1 class="hero__title" data-hero-fade>Transparência e cuidado <span>do início ao fim.</span></h1>
-          <div class="hero__ctas" data-hero-fade>
-            <a class="btn btn--gold" href="#agendar">Agendar diagnóstico <svg class="ico"><use href="#i-seta"/></svg></a>
-            <a class="btn btn--line" href="#servicos">Ver serviços</a>
-          </div>
+      <div class="hero__bg" data-hero-photo data-allow-overlap><img data-pic="mao-na-massa" data-parallax sizes="100vw" alt="Mecânico da Oficina 3L com lanterna de cabeça trabalhando no motor de um carro" loading="eager" fetchpriority="high"></div>
+      <div class="hero__content">
+        <p class="kicker kicker--gold" data-hero-fade><img class="kicker__mark" src="logo-mark.png" alt="" width="384" height="414">Oficina mecânica · Franco da Rocha, SP</p>
+        <h1 class="hero__title"><span class="line" data-hero-line>Transparência</span> <span class="line" data-hero-line>e cuidado</span> <span class="line line--gold" data-hero-line>do início ao fim.</span></h1>
+        <p class="hero__lead" data-hero-fade>Diagnóstico preciso, manutenção preventiva e corretiva, freios, suspensão e troca de óleo. Seu carro em boas mãos.</p>
+        <div class="hero__ctas" data-hero-fade>
+          <a class="btn btn--gold" href="#agendar">Agendar diagnóstico <svg class="ico"><use href="#i-seta"/></svg></a>
+          <a class="btn btn--line" href="#servicos">Ver serviços</a>
         </div>
-
-        <figure class="hero__photo" data-hero-photo>
-          <div class="hero__frame"><img data-pic="mao-na-massa" data-parallax sizes="(min-width: 1024px) 52vw, 100vw" alt="Mecânico com lanterna de cabeça trabalhando no motor de um carro" loading="eager" fetchpriority="high"></div>
-          <a class="status-card" href="#visite">
-            <span class="status-card__row"><span class="led" aria-hidden="true"></span><b data-status-title>Seg. a sex.</b></span>
-            <span class="status-card__txt" data-status-short>9h às 18h</span>
-            <span class="status-card__go">Horário e endereço <svg class="ico"><use href="#i-seta"/></svg></span>
-          </a>
-        </figure>
       </div>
-
-      <dl class="specs" aria-label="Ficha técnica da oficina">
-        <div class="spec" data-spec><dt>Nota no Google</dt><dd><span data-count="5" data-decimals="1">5,0</span></dd></div>
-        <div class="spec" data-spec><dt>Avaliações</dt><dd><span data-count="36">36</span></dd></div>
-        <div class="spec" data-spec><dt>Seg. a sex.</dt><dd>9–18h</dd></div>
-        <div class="spec" data-spec><dt>Câmbio mais pesado do mês</dt><dd><span data-count="120">120</span><small>kg</small></dd></div>
-      </dl>
+      <div class="hero__base">
+        <dl class="specs" aria-label="A oficina em números">
+          <div class="spec" data-spec><dt>Nota no Google</dt><dd><span data-count="5" data-decimals="1">5,0</span><span class="spec__stars" aria-hidden="true">★</span></dd></div>
+          <div class="spec" data-spec><dt>Avaliações</dt><dd><span data-count="36">36</span></dd></div>
+          <div class="spec" data-spec><dt>Seg. a sex.</dt><dd>9–18h</dd></div>
+          <div class="spec" data-spec><dt>Câmbio mais pesado do mês</dt><dd><span data-count="120">120</span><small>kg</small></dd></div>
+        </dl>
+        <a class="status-card" href="#visite" data-status-card>
+          <span class="status-card__row"><span class="led" aria-hidden="true"></span><b data-status-title>Seg. a sex.</b></span>
+          <span class="status-card__txt" data-status-short>9h às 18h</span>
+          <span class="status-card__go">Horário e endereço <svg class="ico"><use href="#i-seta"/></svg></span>
+        </a>
+      </div>
     </section>
+    <div class="checker" aria-hidden="true"></div>
 
     <!-- 2. Por que a 3L -->
     <section class="porque" id="porque" data-section="porque" tabindex="-1">
@@ -198,7 +195,7 @@
         <p class="kicker">Equipe</p>
         <h2 class="h2">Quem cuida <em>do seu carro.</em></h2>
         <p class="equipe__lead">Em julho de 2025 a oficina mudou de endereço, e o Lucas Lacerda chegou junto com o Lucas Andrelo para essa nova fase. Muitos clientes ainda lembram do nome antigo, Andrelo Garagem.</p>
-        <a class="btn btn--dark" href="#agendar">Falar com a equipe <svg class="ico"><use href="#i-seta"/></svg></a>
+        <a class="btn btn--gold" href="#agendar">Falar com a equipe <svg class="ico"><use href="#i-seta"/></svg></a>
       </div>
       <figure class="equipe__photo">
         <div class="equipe__frame"><img data-pic="equipe" data-parallax sizes="(min-width: 1024px) 50vw, 100vw" alt="Lucas Andrelo e Lucas Lacerda, de costas, com os moletons da Oficina 3L"></div>
@@ -288,6 +285,7 @@
     </section>
   </main>
 
+  <div class="checker" aria-hidden="true"></div>
   <!-- 9. Rodapé em bloco dourado -->
   <footer class="footer" id="visite" tabindex="-1">
     <div class="footer__grid">

@@ -10,8 +10,8 @@ npm run build    # gera dist/
 npm run deploy   # publica no GitHub Pages (Twyck/oficina-3l-preview), só com autorização
 ```
 
-## Direção (v2)
-A v1 (painel de carro escuro) foi descartada: parecia a mesma fórmula dos outros sites. A v2 segue as referências do João (BeMechanic, CarHive, Car Doctor e Depower), com a cor da marca no lugar do azul:
+## Direção (v3: escuro, a cara da marca)
+A v1 (painel de carro) e a v2 (base clara) foram descartadas. A v3 segue as referências (BeMechanic, CarHive, Car Doctor e Depower) com a cara da marca: preto dos posts, dourado da logo, amarelo do card de localização e o quadriculado do flyer de férias. Hero com foto cheia (BeMechanic):
 - **Blocos de cor:** concreto claro, preto e dourado sólido (`--accent`, troca em uma linha se o cliente quiser azul).
 - **Tipografia:** Unbounded (larga, como o letreiro da logo), Manrope e Geist Mono.
 - **Hero "ficha técnica" (Depower):** "3L" gigante, foto de trabalho com o cartão dourado de status ao vivo e a linha de números (5,0 · 36 · 9–18h · 120 kg).
