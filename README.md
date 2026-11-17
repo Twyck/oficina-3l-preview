@@ -12,9 +12,9 @@ npm run deploy   # publica no GitHub Pages (Twyck/oficina-3l-preview), só com a
 
 ## Direção (v3: escuro, a cara da marca)
 A v1 (painel de carro) e a v2 (base clara) foram descartadas. A v3 segue as referências (BeMechanic, CarHive, Car Doctor e Depower) com a cara da marca: preto dos posts, dourado da logo, amarelo do card de localização e o quadriculado do flyer de férias. Hero com foto cheia (BeMechanic):
-- **Blocos de cor:** concreto claro, preto e dourado sólido (`--accent`, troca em uma linha se o cliente quiser azul).
+- **Blocos de cor:** preto e grafite com blocos dourados sólidos (`--gold`); a faixa quadriculada do flyer separa hero e rodapé.
 - **Tipografia:** Unbounded (larga, como o letreiro da logo), Manrope e Geist Mono.
-- **Hero "ficha técnica" (Depower):** "3L" gigante, foto de trabalho com o cartão dourado de status ao vivo e a linha de números (5,0 · 36 · 9–18h · 120 kg).
+- **Hero (BeMechanic + Depower):** foto cheia de um mecânico trabalhando, título com "do início ao fim" em dourado, cartão dourado de status ao vivo e a linha de números (5,0 · 36 · 9–18h · 120 kg).
 - **Por que a 3L (BeMechanic):** seção preta com checklist e a fileira de ícones de serviço.
 - **Serviços (CarHive):** painel preto com cards brancos por cima; a seta de cada card abre o WhatsApp já com o serviço.
 - **Equipe:** os dois Lucas.
